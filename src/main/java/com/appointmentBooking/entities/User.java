@@ -1,9 +1,6 @@
 package com.appointmentBooking.entities;
 
 import java.time.LocalDate;
-
-import org.springframework.boot.autoconfigure.domain.EntityScan;
-
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;

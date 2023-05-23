@@ -17,7 +17,7 @@ public class AppointmentBooking1Application {
 		ApplicationContext context = SpringApplication.run(AppointmentBooking1Application.class, args);
 		UserRepository userRepository = context.getBean(UserRepository.class);
 		
-		// create user
+		// CREATE user
 		User user1 = new User();
 		user1.setAppointmentDate(LocalDate.of(2023, 5, 26));
 		user1.setIssueDate(LocalDate.of(2023, 5, 23));
@@ -39,7 +39,7 @@ public class AppointmentBooking1Application {
 		System.out.println(resultUser2);
 		
 		
-		// update user by id
+		// UPDATE user by id
 		int id = 1;
 		Optional<User> op = userRepository.findById(id);
 		User user = op.get();
@@ -49,17 +49,18 @@ public class AppointmentBooking1Application {
 		System.out.println("updated user :" + user);
 		
 		
-		// read user (get)
+		// READ user (get)
 		Iterable<User> itr = userRepository.findAll();
 		itr.forEach(u->System.out.println(u));
-		// read user by id
+		// READ user by id
 		int getId = 2;
 		Optional<User> op1 = userRepository.findById(getId);
 		User u = op1.get();
 		System.out.println(u);
 		
 
-		// delete user
+
+		// DELETE user
 		int deleteId = 1;
 		userRepository.deleteById(deleteId);
 		
